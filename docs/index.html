@@ -16,18 +16,20 @@
 	<!--添加latex公式插件-->
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
 	<!--分页导航-->
-	<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> 
+	<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 	<!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统-->
 	<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-	
+
 </head>
 
 <body>
     <div id="app">加载中...</div>
     <script>
 		var gitalkConfig = {
+            //proxy: 'https://proxy',
 			clientID: '911aaea2b0b91011e4d7',
 			clientSecret: '0a8b236c333b2730b2c881b6971ad7b8b85469e8',
+            accessToken: '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',
 			repo: 'flame-blog',
 			owner: 'flame160',
 			admin: ["flame160"],
@@ -52,7 +54,7 @@
             subMaxLevel: 4,
             // 小屏设备下合并导航栏到侧边栏
             mergeNavbar: true,
-			
+
 			search: {
                 maxAge: 86400000,// 过期时间，单位毫秒，默认一天
                 placeholder: '🔍搜索',
@@ -119,7 +121,7 @@
 			]
         }
     </script>
-    
+
     <!-- docsify的js依赖或者Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <!-- emoji表情支持 -->
