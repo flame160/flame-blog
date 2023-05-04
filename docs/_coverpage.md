@@ -9,7 +9,7 @@
 [![stars](https://badgen.net/github/stars/docsifyjs/docsify?icon=github&color=4ab8a1)](https://github.com/docsifyjs/docsify/) [![forks](https://badgen.net/github/forks/docsifyjs/docsify?icon=github&color=4ab8a1)](https://github.com/docsifyjs/docsify/) [![stars](https://gitee.com/docsifyjs/docsify/badge/star.svg?theme=dark)](https://gitee.com/docsifyjs/docsify)[![fork](https://gitee.com/docsifyjs/docsify/badge/fork.svg?theme=dark)](https://gitee.com/docsifyjs/docsify)
 
 [DocSify Github](https://github.com/docsifyjs/docsify/)
-[开始使用 Let Go](/zh-cn/README.md)
+[开始使用 Let Go](/README.md)
 
 
 <!--
