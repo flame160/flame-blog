@@ -6,37 +6,37 @@
     <title>dubo blog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- 设置浏览器图标 -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <!-- 默认主题 -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 	<!--添加latex公式插件-->
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
-	<!--分页导航-->
-	<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 	<!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统-->
-	<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+    <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 
 </head>
 
 <body>
     <div id="app">加载中...</div>
     <script>
-		var gitalkConfig = {
-		    //代理https://cloud.tencent.com/developer/article/2093779
-            proxy: 'https://proxy',
-			clientID: '911aaea2b0b91011e4d7',
-			clientSecret: '0a8b236c333b2730b2c881b6971ad7b8b85469e8',
-            accessToken: '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',
-			repo: 'flame-blog',
-			owner: 'flame160',
-			admin: ["flame160"],
-			distractionFreeMode: false,
-            id: decodeURI(window.location.pathname),
-		};
+		// var gitalkConfig = {
+        //     //代理https://cloud.tencent.com/developer/article/2093779
+        //     proxy: 'https://proxy',
+        //     clientID: '911aaea2b0b91011e4d7',
+        //     clientSecret: '0a8b236c333b2730b2c881b6971ad7b8b85469e8',
+        //     accessToken: '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',
+        //     repo: 'flame-blog',
+        //     owner: 'flame160',
+        //     admin: ["flame160"],
+        //     distractionFreeMode: false,
+        //     id: decodeURI(window.location.pathname)
+		// };
+
         window.$docsify = {
             // 项目名称
             // name: 'dubo blog',
@@ -94,38 +94,52 @@
 				color:'rgb(90,90,90)',
 				language:'chinese'
 			},
-			plugins: [
-				function (hook, vm) {
-				  hook.doneEach(function() {
-					var label, domObj, main, divEle, gitalk;
-					label = vm.route.path.split("/").pop();
-					domObj = Docsify.dom;
-					main = domObj.getNode("#main");
+			// plugins: [
+			// 	function (hook, vm) {
+			// 	  hook.doneEach(function() {
+			// 		var label, domObj, main, divEle, gitalk;
+			// 		label = vm.route.path.split("/").pop();
+			// 		domObj = Docsify.dom;
+			// 		main = domObj.getNode("#main");
+            //
+			// 		Array.apply(
+			// 		  null,
+			// 		  document.querySelectorAll("div.gitalk-container")
+			// 		).forEach(function(ele) {
+			// 		  ele.remove();
+			// 		});
+            //
+			// 		divEle = domObj.create("div");
+			// 		divEle.id = "gitalk-container-" + label;
+			// 		divEle.className = "gitalk-container";
+			// 		divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
+			// 		domObj.appendTo(domObj.find(".content"), divEle);
+			// 		gitalk = new Gitalk(
+			// 		  Object.assign(gitalkConfig, { id: !label ? "home" : label })
+			// 		);
+			// 		gitalk.render("gitalk-container-" + label);
+			// 	  });
+			// 	}
+			// ]
+            plugins: [
+                EditOnGithubPlugin.create("https://github.com/flame160/flame-blog/blob/master/docs/", null, "编辑当前页")
+            ],
 
-					Array.apply(
-					  null,
-					  document.querySelectorAll("div.gitalk-container")
-					).forEach(function(ele) {
-					  ele.remove();
-					});
-
-					divEle = domObj.create("div");
-					divEle.id = "gitalk-container-" + label;
-					divEle.className = "gitalk-container";
-					divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
-					domObj.appendTo(domObj.find(".content"), divEle);
-					gitalk = new Gitalk(
-					  Object.assign(gitalkConfig, { id: !label ? "home" : label })
-					);
-					gitalk.render("gitalk-container-" + label);
-				  });
-				}
-			]
         }
+        const gitalk = new Gitalk({
+            clientID: '911aaea2b0b91011e4d7',
+            clientSecret: '0a8b236c333b2730b2c881b6971ad7b8b85469e8',
+            repo: 'flame-blog',
+            owner: 'flame160',
+            admin: ['flame160'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        });
     </script>
 
     <!-- docsify的js依赖或者Docsify v4 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<!--    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>-->
     <!-- emoji表情支持 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
     <!-- 图片放大缩小支持 -->
@@ -136,16 +150,14 @@
 	<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 	<!--字数统计-->
 	<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-	<!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统-->
-	<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统-->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
 	<!--分页导航-->
 	<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 	<!--代码高亮-->
 	<script src="//cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
