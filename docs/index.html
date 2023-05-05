@@ -4,30 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <title>dubo blog</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="description" content="Description">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- 设置浏览器图标 -->
-    <link rel="icon" href="favicon.ico?" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
     <!-- 默认主题 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
-	<!--添加latex公式插件-->
-	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
-	<!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统-->
+    <!--添加latex公式插件-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+    <!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统-->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
     <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
-    <!--<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>-->
-    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js?v=1.7.2"></script>
+    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 
 </head>
 
 <body>
     <div id="app">加载中...</div>
     <script>
-		// var gitalkConfig = {
-        //     //代理https://cloud.tencent.com/developer/article/2093779
-        //     proxy: 'https://proxy',
+        // var gitalkConfig = {
+        //     //代理https://cuiqingcai.com/30010.html
+        //     proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token',
         //     clientID: '911aaea2b0b91011e4d7',
         //     clientSecret: '0a8b236c333b2730b2c881b6971ad7b8b85469e8',
         //     accessToken: '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',
@@ -36,15 +36,15 @@
         //     admin: ["flame160"],
         //     distractionFreeMode: false,
         //     id: decodeURI(window.location.pathname)
-		// };
+        // };
 
         window.$docsify = {
             // 项目名称
             // name: 'dubo blog',
             // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
             repo: 'https://github.com/flame160',
-			//切换页面后是否自动跳转到页面顶部
-			auto2top: true,
+            //切换页面后是否自动跳转到页面顶部
+            auto2top: true,
             // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
             loadSidebar: true,
             // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
@@ -58,77 +58,78 @@
             // 小屏设备下合并导航栏到侧边栏
             mergeNavbar: true,
 
-			search: {
+            search: {
                 maxAge: 86400000,// 过期时间，单位毫秒，默认一天
                 placeholder: '🔍搜索',
-				// 支持本地化
-				//placeholder: {
-				//	'/zh-cn/': '搜索',
-				//	'/': 'Type to search'
-				//},
+                // 支持本地化
+                //placeholder: {
+                //	'/zh-cn/': '搜索',
+                //	'/': 'Type to search'
+                //},
                 noData: '😞找不到结果',
-				// 支持本地化
-				//noData: {
-				//	'/zh-cn/': '找不到结果',
-				//	'/': 'No Results'
-				//},
-				paths: [], // or 'auto'
-				// 搜索标题的最大层级, 1 - 6
+                // 支持本地化
+                //noData: {
+                //	'/zh-cn/': '找不到结果',
+                //	'/': 'No Results'
+                //},
+                paths: [], // or 'auto'
+                // 搜索标题的最大层级, 1 - 6
                 depth: 4,
-				// 是否隐藏其他侧边栏内容
+                // 是否隐藏其他侧边栏内容
                 hideOtherSidebarContent: false,
-				// 避免搜索索引冲突
-				// 同一域下的多个网站之间
-				namespace: 'website-1'
+                // 避免搜索索引冲突
+                // 同一域下的多个网站之间
+                namespace: 'website-1'
             },
-			// 分页
-			pagination: {
-				previousText: '上一章节',
-				nextText: '下一章节',
-				crossChapter: true,
-				crossChapterText: true
-			},
-			// 字数统计
-			count:{
-				countable:true,
-				fontsize:'0.9em',
-				color:'rgb(90,90,90)',
-				language:'chinese'
-			},
-			// plugins: [
-			// 	function (hook, vm) {
-			// 	  hook.doneEach(function() {
-			// 		var label, domObj, main, divEle, gitalk;
-			// 		label = vm.route.path.split("/").pop();
-			// 		domObj = Docsify.dom;
-			// 		main = domObj.getNode("#main");
+            // 分页
+            pagination: {
+                previousText: '上一章节',
+                nextText: '下一章节',
+                crossChapter: true,
+                crossChapterText: true
+            },
+            // 字数统计
+            count: {
+                countable: true,
+                fontsize: '0.9em',
+                color: 'rgb(90,90,90)',
+                language: 'chinese'
+            },
+            // plugins: [
+            // 	function (hook, vm) {
+            // 	  hook.doneEach(function() {
+            // 		var label, domObj, main, divEle, gitalk;
+            // 		label = vm.route.path.split("/").pop();
+            // 		domObj = Docsify.dom;
+            // 		main = domObj.getNode("#main");
             //
-			// 		Array.apply(
-			// 		  null,
-			// 		  document.querySelectorAll("div.gitalk-container")
-			// 		).forEach(function(ele) {
-			// 		  ele.remove();
-			// 		});
+            // 		Array.apply(
+            // 		  null,
+            // 		  document.querySelectorAll("div.gitalk-container")
+            // 		).forEach(function(ele) {
+            // 		  ele.remove();
+            // 		});
             //
-			// 		divEle = domObj.create("div");
-			// 		divEle.id = "gitalk-container-" + label;
-			// 		divEle.className = "gitalk-container";
-			// 		divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
-			// 		domObj.appendTo(domObj.find(".content"), divEle);
-			// 		gitalk = new Gitalk(
-			// 		  Object.assign(gitalkConfig, { id: !label ? "home" : label })
-			// 		);
-			// 		gitalk.render("gitalk-container-" + label);
-			// 	  });
-			// 	}
-			// ]
+            // 		divEle = domObj.create("div");
+            // 		divEle.id = "gitalk-container-" + label;
+            // 		divEle.className = "gitalk-container";
+            // 		divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
+            // 		domObj.appendTo(domObj.find(".content"), divEle);
+            // 		gitalk = new Gitalk(
+            // 		  Object.assign(gitalkConfig, { id: !label ? "home" : label })
+            // 		);
+            // 		gitalk.render("gitalk-container-" + label);
+            // 	  });
+            // 	}
+            // ]
             plugins: [
                 EditOnGithubPlugin.create("https://github.com/flame160/flame-blog/blob/master/docs/", null, "编辑当前页")
             ],
 
         }
         const gitalk = new Gitalk({
-	    // proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token',
+            // 代理 https://github.com/gitalk/gitalk/issues/429
+            proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token',
             clientID: '911aaea2b0b91011e4d7',
             clientSecret: '0a8b236c333b2730b2c881b6971ad7b8b85469e8',
             repo: 'flame-blog',
@@ -140,30 +141,30 @@
     </script>
 
     <!-- docsify的js依赖或者Docsify v4 -->
-     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-<!--    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>-->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>-->
     <!-- emoji表情支持 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
     <!-- 图片放大缩小支持 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
     <!-- 搜索功能支持 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-	<!--添加latex公式插件-->
-	<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-	<!--字数统计-->
-	<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+    <!--添加latex公式插件-->
+    <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+    <!--字数统计-->
+    <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
     <!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统-->
-    	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-	<!--分页导航-->
-	<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-	<!--代码高亮-->
-	<script src="//cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-	<!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+    <!--分页导航-->
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <!--代码高亮-->
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+    <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 
 </body>
