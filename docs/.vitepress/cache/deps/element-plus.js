@@ -6,8 +6,6 @@ import {
   Text,
   Transition,
   TransitionGroup,
-  __commonJS,
-  __toESM,
   camelize,
   capitalize,
   cloneVNode,
@@ -87,7 +85,11 @@ import {
   withDirectives,
   withKeys,
   withModifiers
-} from "./chunk-YJNUPD57.js";
+} from "./chunk-IYO332YY.js";
+import {
+  __commonJS,
+  __toESM
+} from "./chunk-UXIASGQL.js";
 
 // node_modules/dayjs/dayjs.min.js
 var require_dayjs_min = __commonJS({
@@ -793,7 +795,7 @@ var whenMouse = (handler) => {
   return (e) => e.pointerType === "mouse" ? handler(e) : void 0;
 };
 
-// node_modules/vue-demi/lib/index.mjs
+// node_modules/element-plus/node_modules/vue-demi/lib/index.mjs
 var isVue2 = false;
 
 // node_modules/element-plus/node_modules/@vueuse/shared/index.mjs
@@ -32249,7 +32251,7 @@ var calculatePathNodes = (node) => {
   }
   return nodes;
 };
-var Node = class {
+var Node = class _Node {
   constructor(data, config, parent2, root2 = false) {
     this.data = data;
     this.config = config;
@@ -32269,7 +32271,7 @@ var Node = class {
     this.pathValues = pathNodes.map((node) => node.value);
     this.pathLabels = pathNodes.map((node) => node.label);
     this.childrenData = childrenData;
-    this.children = (childrenData || []).map((child) => new Node(child, config, this));
+    this.children = (childrenData || []).map((child) => new _Node(child, config, this));
     this.loaded = !config.lazy || this.isLeaf || !isEmpty2(childrenData);
   }
   get isDisabled() {
@@ -32289,7 +32291,7 @@ var Node = class {
   }
   appendChild(childData) {
     const { childrenData, children } = this;
-    const node = new Node(childData, this.config, this);
+    const node = new _Node(childData, this.config, this);
     if (Array.isArray(childrenData)) {
       childrenData.push(childData);
     } else {
@@ -60563,7 +60565,7 @@ var getPropertyFromData = function(node, prop) {
   }
 };
 var nodeIdSeed = 0;
-var Node2 = class {
+var Node2 = class _Node {
   constructor(options) {
     this.id = nodeIdSeed++;
     this.text = null;
@@ -60691,7 +60693,7 @@ var Node2 = class {
   insertChild(child, index, batch) {
     if (!child)
       throw new Error("InsertChild error: child is required.");
-    if (!(child instanceof Node2)) {
+    if (!(child instanceof _Node)) {
       if (!batch) {
         const children = this.getChildren(true);
         if (!children.includes(child.data)) {
@@ -60706,8 +60708,8 @@ var Node2 = class {
         parent: this,
         store: this.store
       });
-      child = reactive(new Node2(child));
-      if (child instanceof Node2) {
+      child = reactive(new _Node(child));
+      if (child instanceof _Node) {
         child.initialize();
       }
     }
