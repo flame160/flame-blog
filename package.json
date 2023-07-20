@@ -8,7 +8,7 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "docs:preview": "vitepress preview docs",
-    "deploy": "./deploy.sh"
+    "docs:deploy": "sh deploy.sh"
   },
   "devDependencies": {
     "vitepress": "^1.0.0-beta.5"

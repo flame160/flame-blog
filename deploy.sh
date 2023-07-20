@@ -18,7 +18,8 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# git push -f git@github.com:你的git名/你的git项目名.git master
-git push -f git@github.com:flame160/flame-blog.git master
+# git push -f git@github.com:你的git名/你的git项目名.git master:分支名称（ssh）
+# https到main分支
+git push -f  https://github.com/flame160/flame-blog.git main
 
 cd -
