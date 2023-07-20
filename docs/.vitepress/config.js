@@ -5,6 +5,7 @@ import mdItCustomAttrs  from 'markdown-it-custom-attrs'  //vitepress添加图片
 
 export default defineConfig({
   title: "My Blog",
+  ignoreDeadLinks: true, //https://vitepress.dev/reference/site-config#ignoredeadlinks
   description: "dubo blog",
   markdown: {
 	lineNumbers: true,  //代码行号
