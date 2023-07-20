@@ -1,18 +1,24 @@
 #!/usr/bin/env sh
-# 忽略错误
+
+#部署到github pages
+#https://cloud.tencent.com/developer/article/2115149?from=15425
+
+# 确保脚本抛出遇到的错误
 set -e
 
-# 构建
-pnpm run docs:build
+# 生成静态文件 npm或pnpm run docs:build
+yarn docs:build
 
-# 进入待发布的目录
+# 进入生成的文件夹
 cd docs/.vitepress/dist
 
+# git add -A选项告诉Git将所有文件添加到索引 只想添加新创建和修改的文件（不包括已删除的文件），可以使用git add .命令。
+# git commit -m注释
 git init
 git add -A
-git commit -m 'add'
+git commit -m 'deploy'
 
-# git push -f git@github.com:你的git名/你的git项目名.git master:你的git分支
-git push -f git@github.com:flame160/flame-bog.git master
+# git push -f git@github.com:你的git名/你的git项目名.git master
+git push -f git@github.com:flame160/flame-blog.git master
 
 cd -
