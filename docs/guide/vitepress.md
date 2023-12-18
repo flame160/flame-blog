@@ -110,6 +110,6 @@ features:
 ## 问题
 1. "vitepress" resolved to an ESM file. ESM file cannot be loaded by "require". See https://vitejs.dev/guide/troubleshooting.html#this-package-is-esm-only for more details. [plugin externalize-deps]
 
-解决方法：
+解决方法：config.js改名为config.mjs
 - adding "type": "module" to the nearest package.json
 - renaming vite.config.js/vite.config.ts to vite.config.mjs/vite.config.mts
