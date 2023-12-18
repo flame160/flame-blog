@@ -14,7 +14,7 @@ cd docs/.vitepress/dist
 
 # git add -A选项告诉Git将所有文件添加到索引 只想添加新创建和修改的文件（不包括已删除的文件），可以使用git add .命令。
 # git commit -m注释
-git init
+git init main
 git add -A
 git commit -m 'deploy'
 
