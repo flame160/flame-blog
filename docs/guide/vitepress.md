@@ -106,3 +106,10 @@ features:
 ```
 ## 部署和示例
 示例：<br />[vitepress-demo](https://xinlei3166.github.io/vitepress-demo/)：[https://github.com/xinlei3166/vitepress-demo](https://github.com/xinlei3166/vitepress-demo)
+
+## 问题
+1. "vitepress" resolved to an ESM file. ESM file cannot be loaded by "require". See https://vitejs.dev/guide/troubleshooting.html#this-package-is-esm-only for more details. [plugin externalize-deps]
+
+解决方法：
+- adding "type": "module" to the nearest package.json
+- renaming vite.config.js/vite.config.ts to vite.config.mjs/vite.config.mts

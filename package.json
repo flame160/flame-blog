@@ -8,15 +8,13 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "docs:preview": "vitepress preview docs",
-    "docs:deploy": "sh deploy.sh"
+	"docs:deploy": "sh deploy.sh"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-beta.5"
+    "vitepress": "^1.0.0-alpha.75"
   },
   "dependencies": {
     "element-plus": "^2.3.4",
     "markdown-it-custom-attrs": "^1.0.2"
-  },
-  "repository": "https://github.com/flame160/flame-blog.git",
-  "author": "flame160 <1603308392@qq.com>"
+  }
 }
